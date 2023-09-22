@@ -10,6 +10,7 @@ export class CatalogComponent {
 
   products: IProduct[];
   filter: string = '';
+  cart: IProduct[] = [];
 
   constructor() {
     this.products = [
@@ -204,5 +205,10 @@ export class CatalogComponent {
       return ['strikethrough'];
     else
       return [''];
+  }
+
+  addToCart(product: IProduct) {
+    this.cart.push(product);
+    console.log(`product '${product.name}' added to cart`);
   }
 }
