@@ -20,7 +20,7 @@
           </div>
           <div class="price" >
             <div 
-              [style.color]="product.discount > 0 ? 'red' : ''"
+              [ngStyle]="{ color: product.discount > 0 ? 'red' : '' }"
               [ngClass]="getDiscountedClasses(product)"> 
               {{ product.price | currency:'EUR' }}
             </div>
